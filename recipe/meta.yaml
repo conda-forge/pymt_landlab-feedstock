@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: pymt_landlab
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymt_landlab/pymt_landlab-{{ version }}.tar.gz
-  sha256: 24c0f5abd01ff4806117d9cad9314b23d9bdad1d3d6ffebe00accd0fe5185457
+  sha256: 53ffa55dae57c43870db08f796f1f4b8e2c8802b20c8342f18e1810f2ca86cef
 
 build:
   noarch: python
