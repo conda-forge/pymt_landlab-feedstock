@@ -5,24 +5,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pymt_landlab/pymt_landlab-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pymt_landlab/pymt_landlab-{{ version }}.tar.gz
   sha256: 53ffa55dae57c43870db08f796f1f4b8e2c8802b20c8342f18e1810f2ca86cef
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - model_metadata
   run:
-    - python
+    - python >={{ python_min }}
     - landlab
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pymt_landlab
 
